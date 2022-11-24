@@ -1,36 +1,36 @@
 {
-  "name": "employee-tracker",
+  "name": "social-network-api-nosql-mongodb",
   "version": "1.0.0",
-  "description": "An Employee Tracking command-line database content management system (CMS) interface that is created using MySQL, NodeJS and Inquirer.",
+  "description": "Building an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. Using express, mongodb and mongoose odm.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "watch": "nodemon server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/A-N26/Employee-tracker-SQL.git"
+    "url": "git+https://github.com/A-N26/NoSQL-SocialNetworkAPI-MongoDB.git"
   },
   "keywords": [
-    "CMS",
-    "MySQL",
-    "mysql2",
-    "NodeJS",
-    "Inquirer",
-    "console.table"
+    "NoSQL",
+    "API",
+    "Express.js",
+    "MongoDB",
+    "Mongoose ODM"
   ],
   "author": "A-N26",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/A-N26/Employee-tracker-SQL/issues"
+    "url": "https://github.com/A-N26/NoSQL-SocialNetworkAPI-MongoDB/issues"
   },
-  "homepage": "https://github.com/A-N26/Employee-tracker-SQL#readme",
+  "homepage": "https://github.com/A-N26/NoSQL-SocialNetworkAPI-MongoDB#readme",
   "dependencies": {
-    "chalk": "^4.1.2",
-    "console.table": "^0.10.0",
-    "dotenv": "^16.0.2",
-    "figlet": "^1.5.2",
-    "inquirer": "^8.2.4",
-    "mysql2": "^2.3.3"
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "mongoose": "^6.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }

@@ -17,7 +17,7 @@ Javascript, Express.js, MongoDB, Mongoose ODM.
 ## _Table of Contents📖_
 
 - [Installation](#Installation)💾
-- [Usage](#Usage)🖥️
+- [Usage](#Usage)🖥
 - [Links](#Links)📎
 - [Credits](#Credits)💳
 - [Licence](#License)🪪
@@ -40,7 +40,7 @@ Javascript, Express.js, MongoDB, Mongoose ODM.
 
   ![MongoDB_Insomnia preview](./media/MongoDB_insomnia-routes.gif "preview of all routes in insomnia")
 
-## _Usage🖥️_
+## _Usage🖥_
 
 - In insomnia create `GET, POST, PUT & DELETE` routes for the **users, thoughts reactions and friends** to test and verify them out . Please have a look at this [walkthrough video](https://drive.google.com/file/d/1i6NbuXKiG2XsqKrGNuEvuFCG6cwE-iPU/view "length: 12 mins") for the same.
 

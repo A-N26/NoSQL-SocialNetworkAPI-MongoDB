@@ -1,10 +1,11 @@
-const { User, Thoughts } = require('../models');
+const { User, Thought } = require('../models');
 
 const userController = {
-    createUser({body}, res) {
+    createUser({ body }, res) {
         User.create(body)
             .then((dbUserData) => res.json(dbUserData))
-            .catch(err => res.status(400).json(err));
+            .catch((err) => res.status(400).json(err));
+        console.log(body);
     },
 
     getAllUsers(req, res) {
@@ -44,8 +45,8 @@ const userController = {
             })
     },
 
-    updateUser(req, res) {
-        User.findOneAndUpdate({ _id: req.params.id }, {$set: req.body}, { new: true, runValidators: true })
+    updateUser({ params, body }, res) {
+        User.findOneAndUpdate({ _id: params.id }, body, { new: true, runValidators: true })
             .then((dbUserData) => {
                 if (!dbUserData) {
                     res.status(404).json({ message: 'No user found with this id.' });
@@ -53,7 +54,8 @@ const userController = {
                 }
                 res.json(dbUserData);
             })
-            .catch(err => res.json(err))
+            .catch(err => res.json(err));
+        console.log(params, body);
     },
 
     deleteUser(req, res) {
@@ -62,7 +64,7 @@ const userController = {
                 if (!dbUserData) {
                     return res.status(404).json({ message: 'No user found with this id.' });
                 }
-                return Thoughts.deleteMany({ _id: { $in: dbUserData.thoughts } });
+                return Thought.deleteMany({ _id: { $in: dbUserData.thoughts } });
             })
             .then(() => {
                 res.json({ message: 'the user and their associated thoughts have been deleted.' });
